@@ -150,3 +150,6 @@ tamim.age = 42;
 console.log(tamim.age);
 // tamim.country = "England"
 console.log(tamim.country);
+// video - 11: Module systems
+// //ex:1
+// import export
