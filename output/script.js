@@ -49,26 +49,48 @@
 // sayHello({ name: "Raihan", age: 80 })
 // video - 8: function signatures
 //ex:1
-let add;
-add = (a, b) => {
-    return a + b;
-};
-console.log(add(4, 6));
-// add(4,7)
-//ex:2
-let calculation;
-calculation = (a, b, action) => {
-    if (action === 'add') {
-        return a + b;
+// let add: (num1: number, num2: number) => number
+// add = (a: number, b: number) => {
+//     return a + b
+// }
+// console.log(add(4, 6))
+// // add(4,7)
+// //ex:2
+// let calculation: (num1: number, num2: number, z: string) => number
+// calculation = (a: number, b: number, action: string) => {
+//     if (action === 'add') {
+//         return a + b
+//     } else {
+//         return a - b
+//     }
+// }
+// console.log(calculation(11, 4, 'minus'))
+// // ex:3
+// let userDetails: (id: number | string, userInfo: {
+//     name: string,
+//     age: number
+// }) => void;
+// userDetails = (id: number | string, user: { name: string, age: number }) => {
+//     console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`)
+// }
+// userDetails(2, { name: "Ridoy", age: 24 })
+// video - 9: classes
+//ex:1
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
     }
-    else {
-        return a - b;
+    play() {
+        console.log(`${this.name} from ${this.country} is playing.`);
     }
-};
-console.log(calculation(11, 4, 'minus'));
-// ex:3
-let userDetails;
-userDetails = (id, user) => {
-    console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`);
-};
-userDetails(2, { name: "Ridoy", age: 24 });
+}
+const tamim = new Player("Tamim", 35, "Bangladesh");
+const maxwell = new Player("MaxWell", 32, "Australia");
+const players = [];
+players.push(tamim);
+players.push(maxwell);
+console.log("players: ", players);
+tamim.name = "Tamim Iqbal";
+console.log(tamim.name);

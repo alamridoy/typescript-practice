@@ -112,51 +112,99 @@
 // video - 8: function signatures
 //ex:1
 
-let add: (num1: number, num2: number) => number
+// let add: (num1: number, num2: number) => number
 
-add = (a: number, b: number) => {
-    return a + b
+// add = (a: number, b: number) => {
+//     return a + b
 
-}
+// }
 
-console.log(add(4, 6))
+// console.log(add(4, 6))
 
-// add(4,7)
+// // add(4,7)
 
 
 
-//ex:2
-let calculation: (num1: number, num2: number, z: string) => number
+// //ex:2
+// let calculation: (num1: number, num2: number, z: string) => number
 
-calculation = (a: number, b: number, action: string) => {
+// calculation = (a: number, b: number, action: string) => {
 
-    if (action === 'add') {
-        return a + b
-    } else {
-        return a - b
+//     if (action === 'add') {
+//         return a + b
+//     } else {
+//         return a - b
+//     }
+
+// }
+
+// console.log(calculation(11, 4, 'minus'))
+
+
+
+
+// // ex:3
+// let userDetails: (id: number | string, userInfo: {
+//     name: string,
+//     age: number
+// }) => void;
+
+
+// userDetails = (id: number | string, user: { name: string, age: number }) => {
+//     console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`)
+
+
+// }
+
+// userDetails(2, { name: "Ridoy", age: 24 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// video - 9: classes
+//ex:1
+
+
+class Player {
+    name: string;
+    age: number;
+    country: string;
+
+
+    constructor(n: string, a: number, c: string) {
+        this.name = n;
+        this.age = a;
+        this.country = c
+    }
+
+    play() {
+        console.log(`${this.name} from ${this.country} is playing.`)
     }
 
 }
 
-console.log(calculation(11, 4, 'minus'))
+const tamim = new Player("Tamim", 35, "Bangladesh")
+const maxwell = new Player("MaxWell", 32, "Australia")
 
+const players: Player[] = []
 
+players.push(tamim)
+players.push(maxwell)
 
+console.log("players: ", players)
 
-// ex:3
-let userDetails: (id: number | string, userInfo: {
-    name: string,
-    age: number
-}) => void;
+tamim.name = "Tamim Iqbal"
+console.log(tamim.name)
 
-
-userDetails = (id: number | string, user: { name: string, age: number }) => {
-    console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`)
-
-
-}
-
-userDetails(2, { name: "Ridoy", age: 24 })
 
 
 
