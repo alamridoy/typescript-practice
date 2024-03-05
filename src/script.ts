@@ -101,3 +101,64 @@
 
 
 
+
+
+
+
+
+
+
+
+// video - 8: function signatures
+//ex:1
+
+let add: (num1: number, num2: number) => number
+
+add = (a: number, b: number) => {
+    return a + b
+
+}
+
+console.log(add(4, 6))
+
+// add(4,7)
+
+
+
+//ex:2
+let calculation: (num1: number, num2: number, z: string) => number
+
+calculation = (a: number, b: number, action: string) => {
+
+    if (action === 'add') {
+        return a + b
+    } else {
+        return a - b
+    }
+
+}
+
+console.log(calculation(11, 4, 'minus'))
+
+
+
+
+// ex:3
+let userDetails: (id: number | string, userInfo: {
+    name: string,
+    age: number
+}) => void;
+
+
+userDetails = (id: number | string, user: { name: string, age: number }) => {
+    console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`)
+
+
+}
+
+userDetails(2, { name: "Ridoy", age: 24 })
+
+
+
+
+

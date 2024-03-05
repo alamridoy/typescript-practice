@@ -47,3 +47,28 @@
 //     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`)
 // }
 // sayHello({ name: "Raihan", age: 80 })
+// video - 8: function signatures
+//ex:1
+let add;
+add = (a, b) => {
+    return a + b;
+};
+console.log(add(4, 6));
+// add(4,7)
+//ex:2
+let calculation;
+calculation = (a, b, action) => {
+    if (action === 'add') {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
+};
+console.log(calculation(11, 4, 'minus'));
+// ex:3
+let userDetails;
+userDetails = (id, user) => {
+    console.log(`id: ${id} and user name is ${user.name} and age is ${user.age}`);
+};
+userDetails(2, { name: "Ridoy", age: 24 });
