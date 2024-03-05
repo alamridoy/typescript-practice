@@ -29,7 +29,21 @@
 //    console.log(`Hello ${a} and ${b} and ${c}`)
 // }
 // testFunc('2','5',9)
-const calculate = (a, b, c = "true") => {
-    return a + b;
-};
-console.log(calculate(2, 7, "abc"));
+// const calculate = (a: number, b: number, c: string = "true") => {
+//     return a + b
+// }
+// console.log(calculate(2, 7, "abc"))
+//video - 7: type alises
+// type stringOrNum = string | number
+// type userType = { name: string; age: number }
+// const userDetails = (
+//     id: stringOrNum,
+//     user: userType
+// ) => {
+//     console.log(`User id is ${id},name is ${user.name} and age is ${user.age}`)
+// }
+// userDetails(2, { name: "ridoy", age: 24 });
+// const sayHello = (user: userType) => {
+//     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`)
+// }
+// sayHello({ name: "Raihan", age: 80 })
