@@ -174,17 +174,99 @@
 //ex:1
 
 
+// class Player {
+//     name: string;
+//     age: number;
+//     country: string;
+
+
+//     constructor(n: string, a: number, c: string) {
+//         this.name = n;
+//         this.age = a;
+//         this.country = c
+//     }
+
+//     play() {
+//         console.log(`${this.name} from ${this.country} is playing.`)
+//     }
+
+// }
+
+// const tamim = new Player("Tamim", 35, "Bangladesh")
+// const maxwell = new Player("MaxWell", 32, "Australia")
+
+// const players: Player[] = []
+
+// players.push(tamim)
+// players.push(maxwell)
+
+// console.log("players: ", players)
+
+// tamim.name = "Tamim Iqbal"
+// console.log(tamim.name)
+
+
+
+
+
+
+
+
+
+
+
+
+video - 10: Access Modifires
+// //ex:1
+
+// class Player {
+//     private name: string;
+//     public age: number;
+//     readonly country: string;
+
+
+//     constructor(n: string, a: number , c: string){
+//         this.name = n;
+//         this.age = a;
+//         this.country = c
+//     }
+
+//     play(){
+//         console.log(`${this.name} from ${this.country} is playing.`)
+//     }
+
+// }
+
+// const tamim = new Player("Tamim",35,"Bangladesh")
+// const maxwell = new Player("MaxWell",32,"Australia")
+
+// const players: Player[] = []
+
+// players.push(tamim)
+// players.push(maxwell)
+
+// console.log("players: ",players)
+
+// // tamim.name = "Tamim Iqbal"
+// // console.log(tamim.name)
+
+// tamim.age = 42
+// console.log(tamim.age)
+
+// // tamim.country = "England"
+// console.log(tamim.country)
+
+
+
+
+//ex:2
+// shortcut 
+
 class Player {
-    name: string;
-    age: number;
-    country: string;
 
-
-    constructor(n: string, a: number, c: string) {
-        this.name = n;
-        this.age = a;
-        this.country = c
-    }
+    constructor(private name: string,
+        public age: number,
+        readonly country: string) { }
 
     play() {
         console.log(`${this.name} from ${this.country} is playing.`)
@@ -202,10 +284,14 @@ players.push(maxwell)
 
 console.log("players: ", players)
 
-tamim.name = "Tamim Iqbal"
-console.log(tamim.name)
+// tamim.name = "Tamim Iqbal"
+// console.log(tamim.name)
 
+tamim.age = 42
+console.log(tamim.age)
 
+// tamim.country = "England"
+console.log(tamim.country)
 
 
 
