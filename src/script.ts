@@ -24,10 +24,40 @@
 
 
 // object
-let person = {
-    name: "Ridoy",
-    age: 24,
-    isCoder: true
+// let person = {
+//     name: "Ridoy",
+//     age: 24,
+//     isCoder: true
+// }
+
+// console.log(person)
+
+
+
+
+
+// video - 6: function type
+// let myFunc : Function;
+
+// myFunc = ()=>{
+//     console.log("Hello this is function")
+// }
+
+// myFunc()
+
+
+// const testFunc = (a:string,b:string, c:number = 0)=>{
+//    console.log(`Hello ${a} and ${b} and ${c}`)
+// }
+
+
+// testFunc('2','5',9)
+
+
+const calculate = (a: number, b: number, c: string = "true") => {
+
+    return a + b
+
 }
 
-console.log(person)
+console.log(calculate(2, 7, "abc"))
