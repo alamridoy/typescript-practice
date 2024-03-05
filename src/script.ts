@@ -260,38 +260,38 @@ video - 10: Access Modifires
 
 
 //ex:2
-// shortcut 
+// shortcut
 
-class Player {
+// class Player {
 
-    constructor(private name: string,
-        public age: number,
-        readonly country: string) { }
+//     constructor(private name: string,
+//         public age: number,
+//         readonly country: string) { }
 
-    play() {
-        console.log(`${this.name} from ${this.country} is playing.`)
-    }
+//     play() {
+//         console.log(`${this.name} from ${this.country} is playing.`)
+//     }
 
-}
+// }
 
-const tamim = new Player("Tamim", 35, "Bangladesh")
-const maxwell = new Player("MaxWell", 32, "Australia")
+// const tamim = new Player("Tamim", 35, "Bangladesh")
+// const maxwell = new Player("MaxWell", 32, "Australia")
 
-const players: Player[] = []
+// const players: Player[] = []
 
-players.push(tamim)
-players.push(maxwell)
+// players.push(tamim)
+// players.push(maxwell)
 
-console.log("players: ", players)
+// console.log("players: ", players)
 
-// tamim.name = "Tamim Iqbal"
-// console.log(tamim.name)
+// // tamim.name = "Tamim Iqbal"
+// // console.log(tamim.name)
 
-tamim.age = 42
-console.log(tamim.age)
+// tamim.age = 42
+// console.log(tamim.age)
 
-// tamim.country = "England"
-console.log(tamim.country)
+// // tamim.country = "England"
+// console.log(tamim.country)
 
 
 
@@ -301,3 +301,68 @@ console.log(tamim.country)
 // video - 11: Module systems
 // //ex:1
 // import export
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//video :12
+// interface
+
+//object base interface
+// interface Rectangele {
+//     width: number;
+//     length: number;
+// }
+
+// function drawRectangle(options: Rectangele) {
+//     let width = options.width;
+//     let length = options.length;
+// }
+
+// let threeDRectangle = {
+//     width: 30,
+//     length: 20,
+//     height: 15
+// }
+// drawRectangle(threeDRectangle)
+
+
+
+
+
+// class base interface
+import { isPlayer } from './interface/isPlayer'
+class Player implements isPlayer {
+
+    constructor(
+        public name: string,
+        public age: number,
+        public country: string) { }
+
+    play() {
+        console.log(`${this.name} from ${this.country} is playing.`)
+    }
+
+}
+
+const tamim = new Player("Tamim", 35, "Bangladesh")
+let maxwell: isPlayer;
+maxwell = new Player("maxwell", 12, "Australia")
+
+const players: Player[] = []
+
+players.push(tamim)
+players.push(maxwell)

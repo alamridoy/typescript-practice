@@ -1,6 +1,7 @@
 "use strict";
 // variable declearation
 // let playerName = "Ridoy11"
+Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(playerName)
 // playerName = 66
 // console.log(playerName)
@@ -100,34 +101,6 @@
 video - 10;
 Access;
 Modifires;
-// //ex:1
-// class Player {
-//     private name: string;
-//     public age: number;
-//     readonly country: string;
-//     constructor(n: string, a: number , c: string){
-//         this.name = n;
-//         this.age = a;
-//         this.country = c
-//     }
-//     play(){
-//         console.log(`${this.name} from ${this.country} is playing.`)
-//     }
-// }
-// const tamim = new Player("Tamim",35,"Bangladesh")
-// const maxwell = new Player("MaxWell",32,"Australia")
-// const players: Player[] = []
-// players.push(tamim)
-// players.push(maxwell)
-// console.log("players: ",players)
-// // tamim.name = "Tamim Iqbal"
-// // console.log(tamim.name)
-// tamim.age = 42
-// console.log(tamim.age)
-// // tamim.country = "England"
-// console.log(tamim.country)
-//ex:2
-// shortcut 
 class Player {
     constructor(name, age, country) {
         this.name = name;
@@ -139,17 +112,8 @@ class Player {
     }
 }
 const tamim = new Player("Tamim", 35, "Bangladesh");
-const maxwell = new Player("MaxWell", 32, "Australia");
+let maxwell;
+maxwell = new Player("maxwell", 12, "Australia");
 const players = [];
 players.push(tamim);
 players.push(maxwell);
-console.log("players: ", players);
-// tamim.name = "Tamim Iqbal"
-// console.log(tamim.name)
-tamim.age = 42;
-console.log(tamim.age);
-// tamim.country = "England"
-console.log(tamim.country);
-// video - 11: Module systems
-// //ex:1
-// import export
